@@ -9,7 +9,7 @@ module.exports = function (req, res, next) {
 
     const validKeys = fs.readFileSync(VALID_KEYS_PATH, 'utf8').split(os.EOL);
     if (!validKeys.includes(apiKey)) {
-        res.status(401).send('Invalid API key');
+        res.status(401).send('INVALID_KEY');
         return;
     }
 
